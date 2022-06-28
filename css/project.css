@@ -1,0 +1,277 @@
+body{
+    font-family: "cairo", sans-serif;
+    height: 1000vh;
+}
+.main-heading {
+font-size: 40px;
+font-weight: bolder;
+position: relative;
+margin: 70px auto;
+max-width: fit-content; 
+
+
+}
+.main-heading p::after{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -15px;
+    transform: translate(0, 0);
+    width: 40px;
+    height: 40px;
+    border-top: 5px solid #437547;
+    border-left: 5px solid #437547;
+}
+.main-heading p::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: -15px;
+    transform: translate(0, 0);
+    width: 40px;
+    height: 40px;
+    border-bottom: 5px solid #437547;
+    border-right: 5px solid #437547;
+}
+
+.navbar{
+    background-color: white;
+}
+.navbar img{
+    width: 100px;
+    height: 100px;
+}
+.navbar .nav-link {
+    color: black;
+    font-weight: bold;
+}
+.navbar .search{
+    background-color: #437547;
+}
+.navbar .lang{
+    background-color: #437547;
+}
+.buttons .search i{
+    color: white;
+}
+.navbar .lang i{
+    color: white;
+    font-style: normal;
+}
+.navbar .buttons{
+    width: 100px;
+}
+.navbar .buttons .search{
+    height: 40px;
+    width: 35px;
+}
+.navbar .buttons .lang {
+    height: 40px;
+    width: 35px;
+}
+
+/* start landing */
+
+.landing{
+    position: relative;
+
+}
+
+.landing .container p{
+    color: white;
+    font-size: 20px;
+    
+}
+.landing .container button{
+    background-color: #9c7c43;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+}
+.landing .container .text{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.landing .container .text h1{
+    font-weight: bolder;
+    color: #f1ca83;
+}
+.landing .container .text p {
+    font-size: 29px;
+    font-weight: bold;
+}
+.landing button i {
+    
+    background-color: #9c7c43;
+    font-size: 20px;
+    color: white;
+}
+
+/* end landing */
+/* start about us  */
+
+.about-us .container .row .img {
+    background-image: url(../imgs/2.png);
+    background-size: cover;
+    height: 300px;
+}
+
+.about-us .container .row .txt h3{
+   color:#9c7c43;
+   font-weight: bold;
+}
+.about-us .container .row .txt p{
+    font-size: 17px;
+}
+
+.about-us .container .row .list .one {
+    background-color: #f1f1f1;
+    height: 350px;
+    width: 350px;
+}
+.about-us .container .row .list h3{
+color: #9c7c43;
+font-weight: bold;
+}
+.about-us .container .row .list ul li p {
+    line-height: 1.7;
+}
+.about-us .container .row .list ul li img {
+    width: 30px;
+    height: 50px;
+}
+.about-us  .list .two button {
+    background-color: #437547;
+    color:white ;
+    border: none;
+    padding: 8px 30px;
+    margin: 70px 0 0 70px;
+}
+/* end about us  */
+
+/* start services  */
+.services{
+    background-color: #f4f4f4;
+    padding-top: 20px;
+
+}
+
+.services .card{
+    height: 300px;
+    width: 340px;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 35px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.services .row {
+    justify-content: space-around;
+
+}
+
+.services .card button{
+    border: none;
+    font-size: 20px;
+    color: #9c7c43;
+    background-color: white;
+
+}
+.services .card button:hover{
+    color: #437547;
+}
+.services .card h3 {
+    font-weight: bolder;
+    color: black;
+    position: relative;
+
+}
+.services .card h3::after{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 50%;
+    height: 5px;
+    background-color: #9c7c43;
+    transition: 1s;
+    transform: translateX(-100%);
+}
+.services .card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #437547;
+    transition: 1s;
+    transform: translateX(-100%); 
+    
+    
+}
+.services .card:hover::before{
+    transform: translateX(0);
+    
+}
+.services .card:hover h3::after{
+    transform: translateX(0);
+    background-color:#437547;
+}
+
+/* end services  */
+.projects{
+    margin-bottom: 10px;
+}
+.projects .row{
+    justify-content: space-around;
+}
+.projects .row .pics {
+    height: 300px;
+    width: 340px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.projects .more{
+    justify-content: center;
+    margin-top: 60px;
+}
+.projects .more button{
+    padding: 8px 20px ;
+    background-color: #9c7c43;
+    color: white;
+    text-align: center;
+    border: none;
+
+}
+.projects .row .pics::before{
+    content: "";
+    height: 100%;
+    width: calc(100% - 20px);
+    top: 0;
+    left: 10px;
+    background-color: #a2987b87;
+    position: absolute;
+    transition: 1s;
+    transform: translateX(-104%);
+}
+.projects .row .pics:hover::before{
+    transform: translateX(0);
+}
+
+/* start clients  */
+.clients {
+    background-color: #f4f4f4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* end clients  */
+/* footer  */
+
+/* end footer  */
