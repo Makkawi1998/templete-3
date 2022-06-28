@@ -8,6 +8,7 @@ font-weight: bolder;
 position: relative;
 margin: 70px auto;
 max-width: fit-content; 
+margin-top: 0;
 
 
 }
@@ -74,9 +75,14 @@ max-width: fit-content;
 
 .landing{
     position: relative;
-
+    height: 600px;
+    overflow: hidden;
 }
-
+.landing img{
+    object-fit: cover;
+    height: 100%;
+    max-height: 600px;
+}
 .landing .container p{
     color: white;
     font-size: 20px;
@@ -110,6 +116,9 @@ max-width: fit-content;
 
 /* end landing */
 /* start about us  */
+.about-us{
+    margin-top: 70px;
+}
 
 .about-us .container .row .img {
     background-image: url(../imgs/2.png);
@@ -118,8 +127,8 @@ max-width: fit-content;
 }
 
 .about-us .container .row .txt h3{
-   color:#9c7c43;
-   font-weight: bold;
+color:#9c7c43;
+font-weight: bold;
 }
 .about-us .container .row .txt p{
     font-size: 17px;
@@ -127,12 +136,12 @@ max-width: fit-content;
 
 .about-us .container .row .list .one {
     background-color: #f1f1f1;
-    height: 350px;
-    width: 350px;
+    width: 100%;
 }
 .about-us .container .row .list h3{
 color: #9c7c43;
 font-weight: bold;
+padding: 20px;
 }
 .about-us .container .row .list ul li p {
     line-height: 1.7;
@@ -146,7 +155,9 @@ font-weight: bold;
     color:white ;
     border: none;
     padding: 8px 30px;
-    margin: 70px 0 0 70px;
+    margin:0 auto ;
+    display: table;
+    margin-top: 70px;
 }
 /* end about us  */
 
@@ -155,6 +166,9 @@ font-weight: bold;
     background-color: #f4f4f4;
     padding-top: 20px;
 
+}
+.services .container .main-heading{
+    margin: 70px auto;
 }
 
 .services .card{
@@ -221,23 +235,32 @@ font-weight: bold;
     transform: translateX(0);
     background-color:#437547;
 }
+@media (max-width: 767px){
+.small-sc  {
+    flex: 0 0 auto;
+    width: 70%;
+    margin: 0 auto;
+}
+}
+
+
 
 /* end services  */
 .projects{
-    margin-bottom: 10px;
+    margin-bottom: 70px;
+
 }
-.projects .row{
-    justify-content: space-around;
+.projects .container .main-heading{
+    margin: 70px auto;
 }
 .projects .row .pics {
-    height: 300px;
-    width: 340px;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 20px;
     position: relative;
     overflow: hidden;
 }
+.projects .row .pics img {
+    width: 100%;
+}
+
 .projects .more{
     justify-content: center;
     margin-top: 60px;
@@ -253,9 +276,9 @@ font-weight: bold;
 .projects .row .pics::before{
     content: "";
     height: 100%;
-    width: calc(100% - 20px);
+    width: 100%;
     top: 0;
-    left: 10px;
+    left: 0;
     background-color: #a2987b87;
     position: absolute;
     transition: 1s;
@@ -268,10 +291,78 @@ font-weight: bold;
 /* start clients  */
 .clients {
     background-color: #f4f4f4;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 70px 0;
+    margin-top: 0;
 }
 /* end clients  */
 /* footer  */
+footer{
+    background-image:url(../imgs/footer.png) ;
+    background-size: cover;
+    padding: 70px 0;
+}
+
+footer .lists .l-one h2{
+color: #437547;
+}
+footer .lists .l-one li{
+color: white;
+list-style: none;
+}
+
+footer .lists .l-two h2{
+color: #437547;
+}
+footer .lists .l-two li{
+color: white;
+list-style: none;
+}
+footer .list-fot ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    border-bottom: 5px solid #9c7c43; 
+}
+footer .list-fot ul li i{
+    color: white;
+    background-color:#437547;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+}
+footer .list-fot ul li{
+    color: white;
+    
+}
+footer .row {
+    color: white;
+}
+
 
 /* end footer  */
+/* slider footer  */
+.owl-item {
+        background-color: #e3d9ff;
+        color: #333;
+        text-align: center;
+        height:100px;
+        line-height:100px;
+    }
+    .owl-nav {
+        margin: 20px 0 0;
+        text-align:center;
+    }
+    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+        margin: 0 20px;
+        height: 30px;
+        width: 30px;
+        background: #e2d8ff;
+        border-radius: 4px;
+    }
+    #counter { text-align:center;}
+
+/* slider footer  */
