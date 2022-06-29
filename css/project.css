@@ -1,6 +1,6 @@
 body{
     font-family: "cairo", sans-serif;
-    height: 1000vh;
+
 }
 .main-heading {
 font-size: 40px;
@@ -34,7 +34,73 @@ margin-top: 0;
     border-bottom: 5px solid #437547;
     border-right: 5px solid #437547;
 }
+.search{
+    background-color: #000000a2;
+    width: 100%;
+    height: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    visibility: hidden;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+.searchactive{
+    visibility:visible;
+    height: 100%;
+}
 
+.search input{
+    padding: 10px;
+    font-size: 24px;
+    border: 1px solid white;
+    float: left;
+    width: 80%;
+    background: transparent; 
+    color: white; 
+}
+.search button{
+    float: left;
+    padding: 10px;
+    background: transparent;
+    color: white;
+    font-size: 23px;
+    border: 1px solid transparent;
+    border-left: none;
+    position: relative;
+    left: -46px;
+    transform: translateX(12%);
+}
+.navbar .buttons .search-glass:hover{
+    background-color: #9c7c43;
+}
+.navbar .buttons .lang:hover{
+    background-color: #9c7c43;
+}
+.search .mysearch{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.search form{
+    width: 100%;
+    height: 100%;
+}
+.search .closesearch .svg-inline--fa {
+    font-size: 45px;
+    color: #f8f9fa;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.search button:hover{
+    color: black;
+}
 .navbar{
     background-color: white;
 }
@@ -46,13 +112,15 @@ margin-top: 0;
     color: black;
     font-weight: bold;
 }
-.navbar .search{
+.navbar .search-glass{
     background-color: #437547;
+    color: white;
 }
+
 .navbar .lang{
     background-color: #437547;
 }
-.buttons .search i{
+.buttons .search input[type=submit]{
     color: white;
 }
 .navbar .lang i{
@@ -62,7 +130,7 @@ margin-top: 0;
 .navbar .buttons{
     width: 100px;
 }
-.navbar .buttons .search{
+.navbar .buttons .search-glass{
     height: 40px;
     width: 35px;
 }
@@ -70,13 +138,36 @@ margin-top: 0;
     height: 40px;
     width: 35px;
 }
-
+.navbar .collapse .active{
+    background-color: #437547;
+}
+.navbar .collapse .nav-item:hover{
+background-color: #437547;
+}
 /* start landing */
 
 .landing{
     position: relative;
     height: 600px;
     overflow: hidden;
+}
+@media (max-width:991px) {
+    .about-us{
+        position: relative;
+    top: -40px;
+    }
+}
+@media (max-width:550px) {
+    .about-us{
+        position: relative;
+    top: -333px;
+    }
+}
+@media (max-width: 756px){
+.about-us {
+    position: relative;
+    top: -221px;
+}
 }
 .landing img{
     object-fit: cover;
@@ -341,28 +432,47 @@ footer .list-fot ul li{
 footer .row {
     color: white;
 }
-
+footer .end {
+    text-align: end;
+}
 
 /* end footer  */
 /* slider footer  */
-.owl-item {
-        background-color: #e3d9ff;
-        color: #333;
-        text-align: center;
-        height:100px;
-        line-height:100px;
-    }
-    .owl-nav {
-        margin: 20px 0 0;
-        text-align:center;
-    }
-    .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
-        margin: 0 20px;
-        height: 30px;
-        width: 30px;
-        background: #e2d8ff;
-        border-radius: 4px;
-    }
-    #counter { text-align:center;}
+.owl-nav{
+    position: absolute;
+    bottom: -79px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.owl-nav button{
+    color: white !important;
+    background-color: #437547 !important;
+    width: 30px;
+    height: 30px;
+    font-size: 20px !important;
+    margin: 0 5px;  
+}
+
+
+.clients button:hover{
+background-color: #9c7c43 !important;
+}
+
+
 
 /* slider footer  */
+.back-to-top button .go-top {
+    font-size: 35px;
+    color: white;
+}
+.back-to-top button {
+    background-color: #437547;
+    padding: 5px;
+    position: fixed;
+    top: 90%;
+    left: 95%;
+    border: 1px solid gray;
+}
+.back-to-top button:hover{
+    background-color: #9c7c43;
+}
