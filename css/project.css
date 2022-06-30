@@ -141,8 +141,14 @@ margin-top: 0;
 .navbar .collapse .active{
     background-color: #437547;
 }
+.navbar .collapse .active .nav-link{
+    color: white;
+}
 .navbar .collapse .nav-item:hover{
 background-color: #437547;
+}
+.navbar .collapse .nav-item .nav-link:hover {
+color: white;
 }
 /* start landing */
 
@@ -263,15 +269,22 @@ padding: 20px;
 }
 
 .services .card{
-    height: 300px;
-    width: 340px;
     background-color: white;
     text-align: center;
-    margin-bottom: 35px;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
     overflow: hidden;
+    padding: 35px 35px;
+    
+}
+.services .card h3{
+    font-size: 35px;
+}
+.services .card p{
+    font-size: 16px;
+    padding: 20px 5px 0px;
+    color: #a6a4a4;
 }
 .services .row {
     justify-content: space-around;
@@ -280,7 +293,7 @@ padding: 20px;
 
 .services .card button{
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     color: #9c7c43;
     background-color: white;
 
@@ -303,7 +316,7 @@ padding: 20px;
     height: 5px;
     background-color: #9c7c43;
     transition: 1s;
-    transform: translateX(-100%);
+    transform: translateX(-50%);
 }
 .services .card::before{
     content: "";
@@ -311,20 +324,23 @@ padding: 20px;
     top: 0;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 7px;
     background-color: #437547;
     transition: 1s;
     transform: translateX(-100%); 
-    
-    
 }
+
 .services .card:hover::before{
     transform: translateX(0);
+
     
 }
+.services .card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .services .card:hover h3::after{
-    transform: translateX(0);
     background-color:#437547;
+    width: 100%;
 }
 @media (max-width: 767px){
 .small-sc  {
@@ -350,6 +366,34 @@ padding: 20px;
 }
 .projects .row .pics img {
     width: 100%;
+}
+.projects .row .small-sc a svg.svg-inline--fa.fa-magnifying-glass{
+    color: white;
+    font-size: 20px;
+}
+.projects .row .small-sc a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%,-50%);
+    background: #437547;
+    text-align: center;
+    line-height: 57px;
+    display: none;
+}
+.projects .row .small-sc a:hover{
+    background-color: #9c7c43;
+}
+.projects .row .small-sc .pics:hover a {
+    display: block;
+} 
+.projects .small-sc{
+    position: relative;
+}
+.projects .row .pics:hover .small-sc a{
+    display: block !important;
 }
 
 .projects .more{
@@ -452,7 +496,29 @@ footer .end {
     font-size: 20px !important;
     margin: 0 5px;  
 }
-
+button.carousel-control-next {
+    right: 90px !important;
+    left: auto;
+    background: #437547;
+    width: 50px;
+    height: 50px;
+    top: 35%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+button.carousel-control-prev {
+    background:#437547;
+    width: 50px;
+    height: 50px;
+    right: 90px !important;
+    top: 45%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+button.carousel-control-prev:hover,
+button.carousel-control-next:hover{
+    background-color: #9c7c43;
+}
 
 .clients button:hover{
 background-color: #9c7c43 !important;

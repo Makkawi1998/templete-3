@@ -41,3 +41,5 @@ $(window).on('scroll', function() {
 $backToTop.on('click', function(e) {
   $("html, body").animate({scrollTop: 0}, 500);
 });
+
+	
