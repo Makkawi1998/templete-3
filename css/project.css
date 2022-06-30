@@ -157,28 +157,9 @@ color: white;
     height: 600px;
     overflow: hidden;
 }
-@media (max-width:991px) {
-    .about-us{
-        position: relative;
-    top: -40px;
-    }
-}
-@media (max-width:550px) {
-    .about-us{
-        position: relative;
-    top: -333px;
-    }
-}
-@media (max-width: 756px){
-.about-us {
-    position: relative;
-    top: -221px;
-}
-}
+
 .landing img{
-    object-fit: cover;
-    height: 100%;
-    max-height: 600px;
+height: 600px;
 }
 .landing .container p{
     color: white;
